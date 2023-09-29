@@ -10,3 +10,11 @@ fs.writeFile("log.txt", Data, (err) => {
   }
   console.log("File berhasil ditulis.");
 });
+
+fs.readFile("log.txt", "utf-8", (err, data) => {
+  if (err) {
+    console.error("Terjadi kesalahan saat membaca file :", err);
+    return;
+  }
+  console.log(data);
+});
